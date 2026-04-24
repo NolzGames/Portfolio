@@ -1,0 +1,449 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    list-style: none;
+}
+body{
+    backdrop-filter: blur(5px);
+    background-image: url(Background2.gif);
+    box-shadow: inset 0 0 0 5000px rgba(0, 0, 0, 0.616);
+    background-size: 100%;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    background-color: rgb(11, 18, 94);
+    backdrop-filter: blur(8px);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    z-index: 1000;
+}
+.logo{
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-wrap: nowrap;
+    transition: 0,3s ease-in-out;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+.nav-links{
+    display: flex;
+    gap: 2rem;
+}
+li a{
+    position: relative;
+    color:white;
+    font-weight: 300;
+}
+li a::before{
+    position: absolute;
+    content: '';
+    width: 0;
+    left: 0;
+    height: 5px;
+    top: 25px;
+    border-radius: 1rem;
+    transition: 0.3s ease-in-out;
+    background: linear-gradient(to right, rgb(0,157,255), rgb(255,0,255));
+}
+li a:hover::before{
+    width: 100%;
+}
+.visit-btn{
+    padding: 0.8rem 1.5rem;
+    border-radius: 3rem;
+    border: none;
+    font-weight: 500;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    text-wrap: nowrap;
+    transition: 0.3s ease-in-out;
+    background: linear-gradient(to right, rgb(0,157,255), rgb(255,0,255));
+}
+.visit-btn:hover{
+    background: linear-gradient(to right, rgb(255,0,255), rgb(0,157,255));
+    transform: scale(1.03);
+}
+#menu-icon{
+    font-size: 2rem;
+    display: none;
+}
+
+section{
+    min-height: 100vh;
+    padding: 8rem 12%;
+    width: 100%;
+    position: relative;
+}
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home .home-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+}
+.home img{
+    width: 30vw;
+    border-radius: 50%;
+}
+.info-box{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap:  1.5rem;
+}
+.info-box h3{
+    font-size: 1.8rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+.info-box h1{
+    font-size: 4rem;
+    color: white;
+    font-weight: 600;
+}
+.info-box span{
+    background: linear-gradient(to right, rgb(102, 219, 255), rgb(255, 92, 241));
+    background-clip: text;
+    color: transparent;
+    font-size: 2rem;
+}
+.btn-group{
+    display: flex;
+    gap: 1rem;
+}
+.btn{
+    background-color: transparent;
+    border-radius: 3rem;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    text-wrap: nowrap;
+    transition: 0.2s ease-in-out;
+}
+.btn:hover{
+    background-color: white;
+    color: black;
+}
+.socials{
+    display: flex;
+    gap: 2rem;
+}
+.socials i{
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.socials i:hover{
+    transition: scale(1.1);
+}
+.section-title{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+.games-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 2rem;
+
+}
+.game-card{
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+    border: 2px solid black;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    background-color: white;
+}
+.game-card:hover{
+    background-color: black;
+    color: white;
+    transform: translateY(-10px)scale(1.02);
+}
+.game-card img{
+    width: 20vw;
+    border-radius: 1rem;
+}
+.game-card .btn-group a{
+    border: 2px solid black;
+    color: black;
+}
+.game-card:hover .btn-group a{
+    border: 2px solid white;
+    color: white;
+}
+.game-card:hover .btn-group a:hover{
+    border: 2px solid white;
+    background-color: white;
+    color: black;
+}
+.game-card h3{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.platforms{
+    display: flex;
+    gap: 2rem;
+}
+.platforms i{
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.games{
+    background-color: white;
+}
+.experience-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+.experience img{
+    width: 24vw;
+    border-radius: 3rem;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+.grid-card{
+    border: 2px solid white;
+    border-radius: 3rem;
+    padding: 3rem;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: left;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.grid-card:hover{
+    transform: scale(1.02);
+    background-color: white;
+    color: black;
+}
+.grid-card i{
+    font-size: 1.5rem;
+    font-weight: 500;
+    background-clip: linear-gradient(to right,#009dff,#ff00ff);
+}
+.grid-card span{
+    color: white;
+    font-weight: 600;  
+}
+.grid-card h5{
+    color: white;
+}
+.grid-card p{
+    color: white;
+}
+.grid-card:hover h5{
+    color: black;
+}
+.grid-card:hover span{
+    color: black;
+}
+.grid-card:hover p{
+    color: black;
+}
+::-webkit-scrollbar{
+    width: 20px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(219,219,219);
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(to bottom,#009dff,#ff00ff);;
+}
+.experience{
+    background-color: black;
+}
+.experience .section-title{
+    color: white;
+}
+.about{
+    min-height: 30vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+}
+.about img{
+    width: 15vw;
+    border-radius: 50%;
+}
+.about-socials{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2rem;
+}
+.about-socials i{
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    color: black;
+}
+.btn-group a{
+    background-color: transparent;
+    border-radius: 3rem;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    text-wrap: nowrap;
+    transition: 0.2s ease-in-out;
+}
+.btn-group a:hover{
+    background-color: white;
+    color: black;
+}
+.about .section-title{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+@media(max-width: 1280px){
+    header{
+        padding: 1rem 2rem;
+        gap: 2rem;
+    }
+    .home .home-container{
+        gap: 3rem;
+    }
+    .grid{
+        flex-direction: column;
+    }
+}
+@media(max-width: 768px){
+    header{
+        padding: 1rem 1rem;
+        gap: 1rem;
+    }
+    header .logo{
+        font-size: 1rem;
+    }
+    header .visit-btn{
+        display: none;
+    }
+    .home .home-container{
+        gap: 3rem;
+    }
+    .grid{
+        display: flex;
+    }
+    .about{
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+    .about img{
+        width: 30vw;
+        margin-bottom: 2rem;
+    }
+    .about-socials{
+        margin-top: 2rem;
+    }
+    .btn-group{
+        flex-direction: column;
+    }
+}
+@media(max-width: 600px){
+    header #menu-icon{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        padding: 1rem;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: rgb(11, 18, 94);
+        display: none;
+        transform: translatex(-80px);
+    }
+    .experience .section-title{
+        font-size: 50px;
+    }
+    .nav-links li{
+        margin-top: 1.5rem;
+        padding: 1rem;
+    }
+    .nav-links.active{
+        display: block;
+    }
+    header{
+        padding: 1rem 5rem;
+        gap: 2rem;
+        justify-content:space-between;
+    }
+    
+    .game-card img{
+        width: 60vw;
+    }
+    header .logo{
+        font-size: 1.5rem;
+    }
+    .home .home-container{
+        gap: 3rem;
+    }
+    .grid{
+        display: flex;
+    }
+    .about{
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+    .about .section-title{
+        margin-top: -5rem;
+    }
+    .about img{
+        width: 40vw;
+        margin-bottom: 2rem;
+        margin-top: -3rem;
+    }
+    .about-socials{
+        margin-top: 2rem;
+    }
+    .btn-group{
+        flex-direction: column;
+    }
+}
